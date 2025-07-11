@@ -1,0 +1,166 @@
+{
+    "Oracle Database Server Groups": [
+  {
+    "status": "Active",
+    "nodeName": "Node-1",
+    "vmName": "VM-Alpha",
+    "plan": "Daily Backup",
+    "hypervisor": "vCenter",
+    "lastBackupResult": "Success",
+    "lastBackupTime": "2024-07-05 22:00"
+  },
+  {
+    "status": "Inactive",
+    "nodeName": "Node-2",
+    "vmName": "VM-Beta",
+    "plan": "Weekly Backup",
+    "hypervisor": "vCenter",
+    "lastBackupResult": "Failed",
+    "lastBackupTime": "2024-07-04 20:00"
+  },
+  {
+    "status": "Active",
+    "nodeName": "Node-3",
+    "vmName": "VM-Gamma",
+    "plan": "Monthly Backup",
+    "hypervisor": "Hyper-V",
+    "lastBackupResult": "Success",
+    "lastBackupTime": "2024-07-06 18:30"
+  },
+  {
+    "status": "Maintenance",
+    "nodeName": "Node-4",
+    "vmName": "VM-Delta",
+    "plan": "Daily Backup",
+    "hypervisor": "vCenter",
+    "lastBackupResult": "Skipped",
+    "lastBackupTime": "2024-07-05 00:00"
+  },
+  {
+    "status": "Active",
+    "nodeName": "Node-5",
+    "vmName": "VM-Epsilon",
+    "plan": "On Demand",
+    "hypervisor": "KVM",
+    "lastBackupResult": "Failed",
+    "lastBackupTime": "2024-07-03 23:45"
+  },
+  {
+    "status": "Inactive",
+    "nodeName": "Node-2",
+    "vmName": "VM-Beta",
+    "plan": "Weekly Backup",
+    "hypervisor": "vCenter",
+    "lastBackupResult": "Failed",
+    "lastBackupTime": "2024-07-04 20:00"
+  },
+  {
+    "status": "Active",
+    "nodeName": "Node-3",
+    "vmName": "VM-Gamma",
+    "plan": "Monthly Backup",
+    "hypervisor": "Hyper-V",
+    "lastBackupResult": "Success",
+    "lastBackupTime": "2024-07-06 18:30"
+  }
+],
+
+    "All Nodes": [
+        { "name": "Node-Alpha", "ip": "192.168.1.10", "location": "Chennai", "status": "Active", "lastBackup": "2024-07-06 12:00" },
+        { "name": "Node-Beta", "ip": "192.168.1.11", "location": "Mumbai", "status": "Inactive", "lastBackup": "2024-07-05 22:00" },
+        { "name": "Node-Gamma", "ip": "192.168.1.12", "location": "Delhi", "status": "Active", "lastBackup": "2024-07-04 20:30" },
+        { "name": "Node-Delta", "ip": "192.168.1.13", "location": "Bangalore", "status": "Inactive", "lastBackup": "2024-07-03 19:00" },
+        { "name": "Node-Epsilon", "ip": "192.168.1.14", "location": "Pune", "status": "Active", "lastBackup": "2024-07-02 18:45" },
+        { "name": "Node-Zeta", "ip": "192.168.1.15", "location": "Hyderabad", "status": "Active", "lastBackup": "2024-07-06 09:00" }
+      ],
+    
+      "Nodes without a plan": [
+        { "name": "Node-X1", "ip": "10.0.0.21", "os": "Ubuntu 22.04", "lastActive": "2024-07-05 15:00", "status": "Active" },
+        { "name": "Node-X2", "ip": "10.0.0.22", "os": "RHEL 9", "lastActive": "2024-07-05 13:00", "status": "Inactive" },
+        { "name": "Node-X3", "ip": "10.0.0.23", "os": "Windows Server 2019", "lastActive": "2024-07-04 20:00", "status": "Active" },
+        { "name": "Node-X4", "ip": "10.0.0.24", "os": "CentOS 8", "lastActive": "2024-07-03 18:00", "status": "Active" },
+        { "name": "Node-X5", "ip": "10.0.0.25", "os": "Debian 11", "lastActive": "2024-07-02 17:00", "status": "Inactive" }
+      ],
+    
+      "vcenter/ESX Groups": [
+          { "groupName": "ESX-Group-A", "hosts": 12, "status": "Healthy" },
+          { "groupName": "ESX-Group-B", "hosts": 8, "status": "Warning" },
+          { "groupName": "ESX-Group-C", "hosts": 5, "status": "Critical" },
+          { "groupName": "ESX-Group-D", "hosts": 12, "status": "Healthy" },
+          { "groupName": "ESX-Group-B", "hosts": 8, "status": "Warning" },
+          { "groupName": "ESX-Group-C", "hosts": 5, "status": "Critical" }
+        ],
+      
+        "Plan Groups": [
+          { "planName": "Plan-A", "type": "Backup", "lastRun": "2024-07-05 21:00" },
+          { "planName": "Plan-B", "type": "Replication", "lastRun": "2024-07-04 20:00" },
+          { "planName": "Plan-C", "type": "Backup", "lastRun": "2024-07-05 21:00" },
+          { "planName": "Plan-B", "type": "Replication", "lastRun": "2024-07-04 20:00" }
+        ],
+      
+        "Linux Backup Server Groups": [
+          { "serverName": "Linux-Backup-1", "os": "Ubuntu 22.04", "status": "Active" },
+          { "serverName": "Linux-Backup-2", "os": "RHEL 9", "status": "Inactive" },
+          { "serverName": "Linux-Backup-1", "os": "Ubuntu 22.04", "status": "Active" },
+          { "serverName": "Linux-Backup-2", "os": "RHEL 9", "status": "Inactive" },
+          { "serverName": "Linux-Backup-1", "os": "Ubuntu 22.04", "status": "Active" },
+          { "serverName": "Linux-Backup-2", "os": "RHEL 9", "status": "Inactive" }
+        ],
+      
+        "All Plans": [
+          { "planName": "Plan-X", "type": "Backup", "status": "Active" },
+          { "planName": "Plan-Y", "type": "Replication", "status": "Inactive" }
+        ],
+      
+        "Recovery Point Servers": [
+          { "serverName": "RPS-1", "ip": "10.0.0.1", "status": "Online" },
+          { "serverName": "RPS-2", "ip": "10.0.0.2", "status": "Offline" }
+        ],
+      
+        "Arcserve Backup Servers": [
+          { "serverName": "AB-Server-1", "location": "Site-A", "status": "Active" },
+          { "serverName": "AB-Server-2", "location": "Site-B", "status": "Active" },
+          { "serverName": "AB-Server-4", "location": "Site-C", "status": "Active" },
+          { "serverName": "AB-Server-1", "location": "Site-A", "status": "Active" }
+        ],
+      
+        "Shared Folders": [
+          { "folderName": "Backup-Share-1", "path": "/mnt/backup1", "status": "Accessible" },
+          { "folderName": "Backup-Share-2", "path": "/mnt/backup2", "status": "Inaccessible" }
+        ],
+      
+        "Cloud Accounts": [
+          { "accountName": "AWS-Primary", "provider": "AWS", "status": "Active" },
+          { "accountName": "Azure-Backup", "provider": "Azure", "status": "Active" }
+        ],
+      
+        "Remote Consoles": [
+          { "consoleName": "Console-A", "ip": "192.168.1.50", "status": "Online" }
+        ],
+      
+        "Arcserve Cloud": [
+          { "region": "US-East", "storageUsed": "2TB", "status": "Healthy" }
+        ],
+      
+        "Storage Arrays": [
+          { "arrayName": "Storage-A", "capacity": "50TB", "used": "30TB", "status": "Online" },
+          { "arrayName": "Storage-B", "capacity": "30TB", "used": "28TB", "status": "Warning" }
+        ],
+      
+        "Instant Virtual Machines": [
+          { "vmName": "Instant-VM-1", "status": "Running" },
+          { "vmName": "Instant-VM-2", "status": "Stopped" },
+          { "vmName": "Instant-VM-1", "status": "Running" },
+          { "vmName": "Instant-VM-2", "status": "Stopped" }
+        ],
+      
+        "Sites": [
+          { "siteName": "Site-A", "location": "Chennai" },
+          { "siteName": "Site-B", "location": "Bangalore" },
+          { "siteName": "Site-A", "location": "Chennai" },
+          { "siteName": "Site-B", "location": "Bangalore" }
+        ]
+      
+      
+  }
+  

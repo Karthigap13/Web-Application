@@ -1,0 +1,74 @@
+<div *ngIf="columns.length > 0">
+    <div class="action-bar-container d-flex justify-content-between align-items-center flex-wrap mb-3 p-2">
+      <div class="d-flex align-items-center">
+        <div class="dropdown me-2">
+          <button class="btn custom-action-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Action
+          </button>
+          <ul class="dropdown-menu">
+            <button class="dropdown-item" type="button" (click)="submitSelectedRows()">Submit</button>
+        </ul>
+        </div>
+        <button class="btn custom-action-btn" (click)="addNewRow()">Add Nodes</button>
+      </div>
+      <div class="d-flex">
+        <label class="me-2 text-dark">Filters:</label>
+
+        <!-- Column dropdown -->
+      <select class="form-select me-2" [(ngModel)]="selectedFilterColumn" (change)="applyFilters()">
+        <option value="">-- Select Column --</option>
+        <option *ngFor="let col of getAvailableFilterColumns()" [value]="col.key">
+          {{ col.header }}
+        </option>
+      </select>
+
+         <!-- Value input -->
+      <input type="text"
+             class="form-control"
+             [(ngModel)]="filterValue"
+             (input)="applyFilters()"
+             placeholder="Enter value">
+      </div>
+    </div>
+  
+    <!-- Table -->
+    <div>
+    <table class="table custom-table">
+      <thead>
+        <tr>
+            <th *ngFor="let col of columns">
+                <ng-container *ngIf="col.header === 'Select'; else normalHeader">
+                    <input type="checkbox">
+                  </ng-container>
+                  <ng-template #normalHeader>
+                    {{ col.header }}
+                  </ng-template>
+              </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of filteredTableData">
+          <td *ngFor="let col of columns">
+            <ng-container *ngIf="col.header=== 'Select'; else dataCell">
+                <input type="checkbox" [(ngModel)]="row.selected">
+
+            </ng-container>
+            <ng-template #dataCell>
+                <ng-container *ngIf="row.isNew; else normalText">
+                    <input type="text" class="form-control" [(ngModel)]="row[col.key]">
+                  </ng-container>
+                  <ng-template #normalText>
+                    {{ row[col.key] }}
+                  </ng-template>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  </div>
+  
+  <div *ngIf="columns.length === 0">
+    <p class="text-white">No table configuration available for {{ node }}</p>
+  </div>
+  

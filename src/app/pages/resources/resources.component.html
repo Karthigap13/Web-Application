@@ -1,0 +1,21 @@
+<div class="d-flex mt-2">
+    <!-- Sidebar -->
+    <div class="sidebar  text-dark p-3" style="width: 250px; min-height: 100vh;">
+        <select class="form-select mb-3" [(ngModel)]="selectedSite">
+            <option value="">-- Select --</option>
+            <option value="localsite">localsite</option>
+        </select>
+
+        <div *ngIf="selectedSite === 'localsite'">
+            <div *ngFor="let item of sidebarItems">
+                <h6>{{ item.title }}</h6>
+                <ul *ngIf="item.children?.length" class="list-unstyled">
+                    <li *ngFor="let child of item.children" (click)="selectNode(item.title, child)"
+                        [ngClass]="{ 'active-subitem': selectedSubItem === child }">
+                        {{ child }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.bg-black {
+    background-color: #000 !important;
+  }
+  
+  .text-gray {
+    color: gray !important;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: white !important;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: white !important;
+    background-color:#656566!important; 
+    border-radius: 4px;
+  }
+  
+  
+  

@@ -1,0 +1,16 @@
+<div>
+  <app-header></app-header>
+  <div>
+    <p class="m-1 text-black ms-5 breadcrumb-text">
+      {{ selectedSite }} &gt; {{ selectedTitle }} &gt; {{ selectedSubItem }}
+    </p>
+  </div>
+  <div class="d-flex">
+    <div>
+      <app-resources (selectionChanged)="onSelectionChanged($event)"></app-resources>
+    </div>
+    <div class="flex-fill">
+      <app-table [node]="selectedSubItem"></app-table>
+    </div>
+  </div>
+</div>

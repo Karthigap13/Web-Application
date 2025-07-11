@@ -1,0 +1,29 @@
+.sidebar {
+  min-width: 250px;
+  background-color: rgba(240, 235, 235, 0.925);
+  color: black;
+}
+
+.sidebar h5,
+.sidebar h6 {
+  color: rgb(12, 11, 11);
+}
+
+.sidebar li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  color:gray;
+}
+
+body {
+  background-color: #121212; /* dark background for page */
+}
+
+.active-subitem {
+    background-color: #87cefa; /* sky blue */
+    color: black;
+    
+  }

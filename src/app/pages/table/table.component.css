@@ -1,0 +1,26 @@
+.action-bar-container {
+    background-color: #2f0dfd24;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding: 4px;
+   
+  }
+  
+  .custom-action-btn {
+   color: black;
+    }
+  
+  .custom-action-btn:hover {
+    background-color: deepskyblue;
+  }
+  
+
+  .custom-table {
+    border: 1px solid #ccc;
+  }
+  .custom-table th,
+.custom-table td {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  color: #333;
+}
