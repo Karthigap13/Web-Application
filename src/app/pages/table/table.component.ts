@@ -80,7 +80,7 @@ export class TableComponent implements OnChanges {
     this.filteredTableData = this.tableData.filter(row => {
       let matchesColumnFilter = true;
       let matchesValueFilter = true;
-
+      
       if (this.selectedFilterColumn) {
         const colValue = (row[this.selectedFilterColumn] || '').toString().toLowerCase();
         matchesColumnFilter = colValue.includes(this.filterValue.toLowerCase());

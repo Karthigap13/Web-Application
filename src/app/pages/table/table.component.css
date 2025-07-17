@@ -5,22 +5,24 @@
     padding: 4px;
    
   }
-  
   .custom-action-btn {
    color: black;
     }
-  
   .custom-action-btn:hover {
     background-color: deepskyblue;
   }
   
-
-  .custom-table {
+.custom-table {
     border: 1px solid #ccc;
+    
   }
-  .custom-table th,
+.custom-table th,
 .custom-table td {
   border: 1px solid #ccc;
   vertical-align: middle;
   color: #333;
+}
+
+.table-content{
+  overflow-x: scroll;
 }

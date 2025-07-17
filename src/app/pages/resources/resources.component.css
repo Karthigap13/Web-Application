@@ -19,11 +19,11 @@
 }
 
 body {
-  background-color: #121212; /* dark background for page */
+  background-color: #121212; 
 }
 
 .active-subitem {
-    background-color: #87cefa; /* sky blue */
+    background-color: #87cefa; 
     color: black;
     
   }

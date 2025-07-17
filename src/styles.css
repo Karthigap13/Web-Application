@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 /* .breadcrumb-text{
     margin-left: 250px !important;
@@ -9,15 +16,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 .breadcrumb-text {
-    font-size: 1rem;
-    white-space: normal;
-    word-break: break-word;
+  font-size: 1rem;
+  white-space: normal;
+  word-break: break-word;
+}
+
+
+
+/* .table-wrapper {
+  overflow-x: scroll;
+} */
+
+@media (max-width: 576px) {
+  .breadcrumb-text {
+    font-size: 0.9rem;
+    margin-left: 1rem;
   }
-  
-  @media (max-width: 576px) {
-    .breadcrumb-text {
-      font-size: 0.9rem;
-      margin-left: 1rem;
-    }
-  }
-  
+}
